@@ -1,4 +1,4 @@
-import { GridColumn, TableSortOrder } from './grid';
+import { GridColumn, TableSortOrder } from './grid.js';
 
 export function getCellValue(row: any, column: any): any {
   const property = column.property;

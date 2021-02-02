@@ -1,12 +1,25 @@
-import _ from 'lodash';
-import ResizeObserver from 'resize-observer-polyfill';
-import { getCellValue, sort } from './sort';
+/// <reference types="resize-observer-browser" />
+
+import { getCellValue, sort } from './sort.js';
 
 function div(parent: HTMLElement, className: string): HTMLElement {
   const element = document.createElement('div');
   element.className = className;
   parent.appendChild(element);
   return element;
+}
+
+function throttle(callback: () => void, delay: number): () => void {
+  let throttling = false;
+  return function(): void {
+      if (!throttling) {
+          callback();
+          throttling = true;
+          setTimeout(function() {
+              throttling = false;
+          }, delay);
+      }
+  }
 }
 
 type Row = any;
@@ -462,7 +475,7 @@ export function createGrid(settings: GridSettings) : DestroyGridFunction {
     container.parentElement?.removeChild(container);
   }
 
-  const handleScrollThrottled = _.throttle(handleScroll, 16);
+  const handleScrollThrottled = throttle(handleScroll, 16);
 
   updateColumnHeaders();
   recomputeVisibleArea();

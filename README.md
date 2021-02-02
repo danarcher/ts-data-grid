@@ -2,10 +2,6 @@
 
 A simple, fast, sortable data grid written in TypeScript, designed for viewing and selecting rather than editing data, and for large numbers (many thousands) of rows.
 
-Sort functionality is separate, in case you wish to call it asynchronously from a web worker.
-
-Dependencies include only `lodash`, for scroll throttling, and `resize-observer-polyfill`, for browsers where `ResizeObserver` is not supported.
-
 ## Usage
 
 ### Grid Behavior
