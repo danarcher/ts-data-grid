@@ -1,0 +1,186 @@
+/*****************************************************************************
+ ** Placeholder Styles
+ ** Not required for functionality.
+ **/
+
+.ts-data-grid-default.ts-data-grid-container {
+  width: 300px;
+}
+
+.ts-data-grid-default .ts-data-grid {
+  height: 300px;
+}
+
+.ts-data-grid-default .ts-data-grid-header {
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.ts-data-grid-default .ts-data-grid-header .btn {
+  padding: 4px;
+  margin: 0;
+}
+
+.ts-data-grid-default .ts-data-grid-column-header {
+  color: #606060;
+  cursor: pointer;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  font-weight: bold;
+  font-size: 13px;
+  padding: 4px;
+}
+
+.ts-data-grid-default .ts-data-grid-column-header,
+.ts-data-grid-default .ts-data-grid-cell {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.ts-data-grid-default .ts-data-grid-row,
+.ts-data-grid-default.ts-data-grid-row {
+  font-size: 14px;
+  line-height: 18px;
+  height: 30px;
+}
+
+.ts-data-grid-default .ts-data-grid-alt {
+  background-color: #f0f0f0;
+}
+
+.ts-data-grid-default .ts-data-grid-hot {
+  background-color: #B2D7FF;
+}
+
+.ts-data-grid-default .ts-data-grid-selected {
+  background-color: #007bff;
+  color: white;
+}
+
+/*****************************************************************************
+ ** Required Styles
+ **/
+
+.ts-data-grid {
+  position: relative;
+}
+
+.ts-data-grid-row-container {
+  position: absolute;
+  top: 0;
+
+  width: 100%;
+  height: 100%;
+
+  overflow-y: hidden;
+  overflow-x: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+.ts-data-grid-scroll-container {
+  position: absolute;
+  top: 0;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: auto;
+}
+
+.ts-data-grid-scroll-area {
+  visibility: hidden;
+}
+
+.ts-data-grid-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+  align-items: flex-end;
+}
+
+.ts-data-grid-header-main {
+  flex-grow: 1;
+  overflow-x: hidden;
+}
+
+.ts-data-grid-header-menu {
+  flex-grow: 0;
+}
+
+.ts-data-grid-column-header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  overflow-x: hidden;
+}
+
+.ts-data-grid-column-header {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.ts-data-grid-row {
+  flex-grow: 0;
+  flex-shrink: 0;
+
+  min-width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.ts-data-grid-cell {
+  flex-grow: 0;
+  flex-shrink: 0;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/*****************************************************************************
+ ** Debug Styles
+ ** For diagnostic purposes only.
+ **/
+
+.ts-data-grid-debug.ts-data-grid-container {
+  width: 800px;
+}
+
+.ts-data-grid-debug .ts-data-grid {
+  height: 105px; /* 10 and a half rows, see below. */
+  background-color: blue;
+}
+
+.ts-data-grid-debug .ts-data-grid-column-header-container {
+  background-color: brown;
+}
+
+.ts-data-grid-debug .ts-data-grid-column-header {
+  background-color: goldenrod;
+}
+
+.ts-data-grid-debug .ts-data-grid-row /* For rendering */,
+.ts-data-grid-debug.ts-data-grid-row /* For size calculation */ {
+  font-size: 8px;
+  line-height: 10px;
+  height: 10px; /* 10 and a half rows, see above. */
+  background-color: white;
+}
+
+.ts-data-grid-debug .ts-data-grid-row.ts-data-grid-alt {
+  background-color: lightblue;
+}
+
+.ts-data-grid-debug .ts-data-grid-row.ts-data-grid-hot {
+  background-color: teal;
+}
+
+.ts-data-grid-debug .ts-data-grid-row.ts-data-grid-selected {
+  background-color: purple;
+}
